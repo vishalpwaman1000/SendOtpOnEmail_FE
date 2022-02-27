@@ -1,0 +1,151 @@
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #4990e7;
+
+  .SubContainer {
+    height: fit-content;
+    width: 800px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 50px auto;
+
+    .Box1 {
+      position: sticky;
+      width: 100%;
+      height: 300px;
+      border: 0.5px solid lightgray;
+      box-sizing: border-box;
+      background-color: white;
+      @extend .flexcenter;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+
+      .Input-Container {
+        width: 80%;
+        height: 80%;
+        // border: 0.5px solid lightgray;
+        @extend .flexcenter;
+        flex-direction: column;
+
+        .Header {
+          width: 100%;
+          height: 20%;
+          color: blue;
+          // border: 0.5px solid lightgray;
+          @extend .flexcenter;
+          font-size: 20px;
+          font-weight: 600;
+          margin: 0 0 15px 0;
+        }
+
+        .flex-containt {
+          width: 100%;
+          height: 40%;
+          margin: 5px;
+          // border: 0.5px solid lightgray;
+
+          .current-Input {
+            width: 70%;
+            height: 60%;
+            border: 0.5px solid blue;
+            border-radius: 10px;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: 600;
+            // color: blue;
+            // background-color: rgb(245, 245, 245);
+            // box-shadow: 0 0px 5px rgba(0, 0, 0, 0.25);
+            @extend .flexcenter;
+          }
+
+          .sub-flex-containt {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            // border: 0.5px solid lightgray;
+          }
+
+          .error {
+            display: flex;
+            color: red;
+            margin: 10px 0 0 0;
+            .error-Message {
+              // color: red;
+              font-weight: 600;
+              font-size: 15px;
+              // margin: 0 0 0 35px;
+            }
+            .error-Icon {
+              margin: 1px 5px 0 35px;
+            }
+          }
+        }
+        .flex-button {
+          width: 100%;
+          height: 40%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          // border: 0.5px solid lightgray;
+          .sub-flex-button {
+            width: 220px;
+            // border: 0.5px solid lightgray;
+            @extend .flexcenter;
+          }
+        }
+      }
+    }
+
+    .Box2 {
+      width: 100%;
+      height: fit-content;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+      background-color: white;
+      flex-direction: column;
+
+      .data-flex {
+        margin: 5px 0 0 0;
+        height: 50px;
+        display: flex;
+        align-content: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        border-bottom: 0.5px solid lightgray;
+        .UserID {
+          flex: 5;
+          @extend .flexcenter;
+        }
+
+        .EmailID {
+          flex: 20;
+          @extend .flexcenter;
+        }
+        .OtpGenerateCount {
+          flex: 8;
+          @extend .flexcenter;
+        }
+        .Date {
+          flex: 10;
+          @extend .flexcenter;
+        }
+      }
+    }
+    
+  }
+
+  .MuiPaginationItem-outlinedSecondary.Mui-selected {
+    background-color: white;
+  }
+  .MuiBackdrop-root{
+    z-index: 1;
+  }
+}
